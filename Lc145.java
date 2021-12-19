@@ -29,4 +29,27 @@ class Solution {
         postOrder(root.right, result);
         result.add(root.val);
     }
+    
+    
+//     迭代解法，按中->右->左的顺序遍历，最后反转结果    
+//     public List<Integer> postorderTraversal(TreeNode root) {
+//         List<Integer> result = new ArrayList<>();
+//         if(root == null){
+//             return result;
+//         }
+//         Stack<TreeNode> stack = new Stack<>();
+//         stack.push(root);
+//         while(!stack.isEmpty()){
+//             TreeNode node = stack.pop();
+//             result.add(node.val);
+//             if(node.left != null){
+//                 stack.push(node.left);
+//             }
+//             if(node.right != null){
+//                 stack.push(node.right);
+//             }
+//         }
+//         Collections.reverse(result);
+//         return result;
+//     }
 }
