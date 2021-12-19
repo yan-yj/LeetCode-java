@@ -28,4 +28,25 @@ class Solution {
         result.add(root.val);
         inOrder(root.right, result);
     }
+
+//     迭代解法，设置一个指针cur记录中序遍历过程
+//     public List<Integer> inorderTraversal(TreeNode root) {
+//         List<Integer> result = new ArrayList<>();
+//         if(root == null){
+//             return result;
+//         }
+//         Stack<TreeNode> stack = new Stack<>();
+//         TreeNode cur = root;
+//         while(cur != null || !stack.isEmpty()){
+//             if(cur != null){
+//                 stack.push(cur);
+//                 cur = cur.left;
+//             }else{
+//                 cur = stack.pop();
+//                 result.add(cur.val);
+//                 cur = cur.right;
+//             }
+//         }
+//         return result;
+//     }
 }
